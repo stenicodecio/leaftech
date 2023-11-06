@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Tech | SUSTAINABLE TECHNOLOGY</title>
+    
+    <meta name="description" content="Leaf Tech é uma empresa de tecnologia totalmente focada em sustentabilidade">
+    <meta name="keywords" content="tecnologia, sustentabilidade, software, neutralização, emissão de carbono">
+    <meta name="author" content="">
+    
+    <meta name="DC.Title" content="Leaf Tech">
+    <meta name="DC.Creator" content="Leaf Tech">
+    <meta name="DC.Description" content="Leaf Tech é uma empresa de tecnologia totalmente focada em sustentabilidade">
+    <meta name="DC.Type" content="Desenvolvimento de software sustentável">
+    <meta name="DC.Language" content="BR">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/web/20220307061903/http://leaftech.tech/">
+    <meta property="og:site_name" content="Leaf Tech">
+    <meta property="og:title" content="Leaf Tech">
+    <meta property="og:image" content="./assets/logotipo.png">
+    <meta property="og:description" content="Leaf Tech é uma empresa de tecnologia totalmente focada em sustentabilidade">
+    
+    <link href="./assets/favicon.png" rel="icon">
+    
+    <style>
+        /* Variáveis */
+        :root {
+            --color-primary-lighten-1: hsl(108, 41%, 41%);
+            --color-primary: hsl(108, 41%, 38%);
+            --color-primary-darken-1: hsl(108, 41%, 15%);
+            --color-white: #f3f4f2;
+        }
+    
+        /* Resets e normalizadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        svg,
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    
+        p {
+            padding: 0.5rem 0;
+        }
+    
+        li {
+            list-style: none;
+        }
+    
+    
+        /* Global */
+        html,
+        body {
+            background-color: #EEF0ED;
+            color: #212121;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            scroll-behavior: smooth;
+        }
+    
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            width: 100%;
+        }
+    
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+    
+        .page>* {
+            flex: 1;
+        }
+    
+        .titulo {
+            font-size: 4rem;
+        }
+    
+        main {
+            overflow: hidden;
+        }
+    
+        @media all and (max-width: 1100px) {
+            .titulo {
+                font-size: 2.5rem;
+            }
+        }
+    
+        @media all and (max-width: 700px) {
+            .page {
+                min-height: auto;
+            }
+    
+            .header {
+                height: 100vh;
+            }
+        }
+    
+    
+    
+        /* HEADER */
+        .header {
+            color: #FFF;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+    
+        .header video {
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+        }
+    
+        .header__video {
+            position: absolute;
+            inset: 0;
+        }
+    
+        .header__video:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+    
+        .header__image {
+            max-width: 545px;
+            aspect-ratio: 109 / 27;
+            height: auto;
+            width: 100%;
+            position: relative;
+            z-index: 3;
+        }
+    
+        .header__continue {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            z-index: 3;
+        }
+    
+        .header__chevron-down {
+            animation: HeaderChevronDown 1.5s ease infinite alternate-reverse forwards;
+        }
+    
+        @keyframes HeaderChevronDown {
+            0% {
+                transform: translateY(0px);
+            }
+    
+            100% {
+                transform: translateY(15px);
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="main.css" defer />
+</head>
+<body>
+    <header>
+        <div class="header page">
+            <div class="header__video">
+                <video id="header__video" autoplay="" loop="" muted="" playsinline="">
+                    <source src="./assets/header/background.mp4" type="video/mp4">
+                </video>
+            </div>
+            <img src="./assets/logotipo.png" alt="Logotipo Leaf Tech"
+                title="Logotipo Leaf Tech" width="545" class="header__image">
+            <a class="header__continue continue" href="#about">
+                <span class="continue__text">Vamos mudar o mundo!</span>
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round" class="header__chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main>
+    
+        <div id="about" class="about page">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__image">
+                        <div class="image__principal">
+                            <img src="./assets/about/principal.jpg"
+                                alt="Uma mão segurando uma pequena folha" title="Uma mão segurando uma pequena folha">
+                        </div>
+                        <div class="image__top"></div>
+                        <div class="image__left"></div>
+                        <div class="image__right"></div>
+                    </div>
+                    <div class="about__conteudo">
+                        <section>
+                            <h2 class="titulo">De folha em folha</h2>
+                            <div class="about__mensagem">
+                                <p>
+                                    Nascemos em 12 de outubro de 2021 como uma folha da Turma da Árvore, somos uma
+                                    empresa 100% voltada para
+                                    sustentabilidade.
+                                </p>
+                                <p>
+                                    Temos como propósito criar tecnologia impactando menos o meio ambiente, para
+                                    permitir um planeta melhor para os próximos
+                                    que virão.
+                                </p>
+                                <p>
+                                    Reduzir a pegada de carbono e saber como agir com essa situação é nossa
+                                    especialidade.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="quote" class="quote page">
+            <div class="container">
+                <div class="quote__inner">
+                    <div class="quote__message">
+                        Desenvolvemos soluções para melhorar a <strong>natureza</strong> e a <strong>vida das pessoas</strong>
+                        nesse planeta.
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="solutions" class="products page">
+            <div class="products__inner">
+                <div class="product">
+                    <div class="container">
+                        <div class="product__inner">
+                            <div class="product__conteudo">
+                                <section>
+                                    <h2 class="titulo">CARBONÔMETRO</h2>
+                                    <div class="about__mensagem">
+                                        <p>
+                                            Ferramenta conectada em uma plataforma centralizada que permite o
+                                            monitoramento automático da pegada de carbono de forma automatizada buscando
+                                            as informações de notas fiscais de produto,
+                                            serviço ou conhecimento de transporte. Permite, de forma automatizada e
+                                            concreta,
+                                            medir e quantificar a quantidade de kg/CO² emitida por uma empresa olhando
+                                            todas suas operações.
+                                        </p>
+                                        <p>
+                                            Permite um acompanhamento e parametrizações para refinar a medição de
+                                            carbono emitido de sua empresa. Na própria
+                                            ferramenta permite que tenhamos a contratação do plantio de árvores dentro
+                                            da metodologia de FSC (Forest Stewardship
+                                            Council), permitindo assim, além da neutralização de carbono, a
+                                            possibilidade de geração do crédito de
+                                            carbono (ativo) para ser negociado na bolsa.
+                                        </p>
+                                        <p>
+                                            Além de ser uma ferramenta interativa e de alta performance, temos também a
+                                            possibilidade de gerar um indicativo global
+                                            da pegada de carbono.
+                                        </p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="product__image">
+                                <img src="./assets/product/carbonometro.png"
+                                    class="product_placeholder" alt="Carbonômetro" title="Carbonômetro">
+                                <div class="product__image--wrapper">
+                                    <img src="./assets/product/carbonometro.png"
+                                        class="product_image--base" alt="Carbonômetro" title="Carbonômetro">
+                                    <img src="./assets/product/carbonometro-ornament.png"
+                                        class="product_image--ornament" alt="Carbonômetro" title="Carbonômetro">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="container">
+                        <div class="product__inner">
+                            <div class="product__image">
+                                <img src="./assets/product/plante-sua-arvore.png"
+                                    class="product_placeholder" alt="Plante sua Árvore" title="Plante sua Árvore">
+                                <div class="product__image--wrapper">
+                                    <img src="./assets/product/plante-sua-arvore.png"
+                                        class="product_image--base" alt="Plante sua Árvore" title="Plante sua Árvore">
+                                    <img src="./assets/product/plante-sua-arvore-ornament.png"
+                                        class="product_image--ornament" alt="Plante sua Árvore" title="Plante sua Árvore">
+                                </div>
+                            </div>
+                            <div class="product__conteudo">
+                                <section>
+                                    <h2 class="titulo">Plante sua Árvore</h2>
+                                    <div class="about__mensagem">
+                                        <p>
+                                            Essa plataforma permitirá para você usuário ter uma árvore para chamar de
+                                            sua. Por meio deste aplicativo, você pode
+                                            adotar uma árvore, escolher o local do plantio e também acompanhar o
+                                            crescimento da mesma.
+                                        </p>
+                                        <p>
+                                            Com este aplicativo, você pode escolher a espécie, pagar com cartão de
+                                            crédito e acompanhar, consultar a quantidade carbono que está sendo
+                                            neutralizado e acompanhar o certificado de
+                                            plantio que enviaremos para você. Sendo assim, você pode ajudar o nosso
+                                            planeta ficar melhor e
+                                            ainda ganhar dinheiro com o crédito de carbono que você poderá receber, caso
+                                            deseje.
+                                        </p>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="container">
+                        <div class="product__inner">
+                            <div class="product__conteudo">
+                                <section>
+                                    <h2 class="titulo">LeafTruck</h2>
+                                    <div class="about__mensagem">
+                                        <p>
+                                            Sistema interativo que auxiliará o caminhoneiro sem necessidade de usar
+                                            aplicativos em celular. Trata-se de
+                                            uma plataforma que roda em um tablet que controla toda a vida do
+                                            caminhoneiro.
+                                        </p>
+                                        <p>Além auxiliar o
+                                            caminhoneiro, esta ferramenta também ajuda com recursos de telemedicina,
+                                            comunicação entre caminhoneiros, músicas, geração de documentos
+                                            fiscais, controle de recursos do caminhão, controle de preços de frete e
+                                            etc.
+                                        </p>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="product__image">
+                                <img src="./assets/product/leaf-truck.png"
+                                    class="product_placeholder" alt="Leaf Truck" title="Leaf Truck">
+                                <div class="product__image--wrapper">
+                                    <img src="./assets/product/leaf-truck.png"
+                                        class="product_image--base" alt="Leaf Truck" title="Leaf Truck">
+                                    <img src="./assets/product/leaf-truck-ornament.png"
+                                        class="product_image--ornament" alt="Leaf Truck" title="Leaf Truck">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="footer__decoration">
+                    <div class="footer__grass">
+                        <svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6172 27.5757C10.6172 27.5757 11.2415 13.2946 24.0395 14.9546Z" fill="#3F3D56"
+                                class="leaf__bye-bye"></path>
+                            <path
+                                d="M7.00107 13.9858C10.5386 13.9858 13.4064 10.855 13.4064 6.99292C13.4064 3.13084 10.5386 0 7.00107 0C3.46349 0 0.595703 3.13084 0.595703 6.99292C0.595703 10.855 3.46349 13.9858 7.00107 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M7.76703 18.7686H5.95898V32.5869H7.76703V18.7686Z" fill="#3F3D56"></path>
+                        </svg>
+                        <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2324 13.6719C12.2324 13.6719 12.8567 -0.609744 25.6548 1.05028Z" fill="#3F3D56">
+                            </path>
+                            <path d="M14.2582 14.6592C14.2582 14.6592 13.6339 0.377561 0.835938 2.03758Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3027 27.5757C14.3027 27.5757 13.6784 13.2946 0.880433 14.9546Z" fill="#3F3D56"
+                                class="leaf__bye-bye--left"></path>
+                            <path
+                                d="M17.9189 13.9858C14.3813 13.9858 11.5135 10.855 11.5135 6.99292C11.5135 3.13084 14.3813 0 17.9189 0C21.4564 0 24.3242 3.13084 24.3242 6.99292C24.3242 10.855 21.4564 13.9858 17.9189 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M17.1529 18.7686H18.9609V32.5864H17.1529V18.7686Z" fill="#3F3D56"></path>
+                        </svg>
+                        <svg width="24" height="33" viewBox="0 0 24 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.0195 27.5767C10.0195 27.5767 10.6438 13.2956 23.4419 14.9555Z" fill="#3F3D56"
+                                class="leaf__bye-bye"></path>
+                            <path
+                                d="M6.40534 13.9858C9.94291 13.9858 12.8107 10.855 12.8107 6.99292C12.8107 3.13084 9.94291 0 6.40534 0C2.86777 0 0 3.13084 0 6.99292C0 10.855 2.86777 13.9858 6.40534 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M7.17038 18.7686H5.3623V32.5869H7.17038V18.7686Z" fill="#3F3D56"></path>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.7661 13.5737C13.7661 13.5737 13.1418 -0.708435 0.34375 0.95165Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.478516 13.5737C0.478516 13.5737 1.10282 -0.708435 13.9009 0.95165Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.8887 27.5757C10.8887 27.5757 11.513 13.2946 24.311 14.9546Z" fill="#3F3D56"
+                                class="leaf__bye-bye--hand-right"></path>
+                            <path
+                                d="M7.27448 13.9858C10.812 13.9858 13.6798 10.855 13.6798 6.99292C13.6798 3.13084 10.812 0 7.27448 0C3.7369 0 0.869141 3.13084 0.869141 6.99292C0.869141 10.855 3.7369 13.9858 7.27448 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M8.03854 18.7686H6.23047V32.5864H8.03854V18.7686Z" fill="#3F3D56"></path>
+                            <path d="M10.8887 27.5757C10.8887 27.5757 11.513 13.2946 24.311 14.9546Z" fill="#3F3D56"
+                                class="leaf__bye-bye--hand-left" style="transform: rotateY(180deg) translateX(-14px);">
+                            </path>
+                            <path
+                                d="M7.27448 13.9858C10.812 13.9858 13.6798 10.855 13.6798 6.99292C13.6798 3.13084 10.812 0 7.27448 0C3.7369 0 0.869141 3.13084 0.869141 6.99292C0.869141 10.855 3.7369 13.9858 7.27448 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M8.03854 18.7686H6.23047V32.5869H8.03854V18.7686Z" fill="#3F3D56"></path>
+                        </svg>
+                        <svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3027 27.5757C14.3027 27.5757 13.6784 13.2946 0.880433 14.9546Z" fill="#3F3D56"
+                                class="leaf__bye-bye--left"></path>
+                            <path
+                                d="M17.9189 13.9858C14.3813 13.9858 11.5135 10.855 11.5135 6.99292C11.5135 3.13084 14.3813 0 17.9189 0C21.4564 0 24.3242 3.13084 24.3242 6.99292C24.3242 10.855 21.4564 13.9858 17.9189 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M17.1529 18.7686H18.9609V32.5864H17.1529V18.7686Z" fill="#3F3D56"></path>
+                        </svg>
+                        <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.8754 13.5737C13.8754 13.5737 13.2511 -0.708435 0.453125 0.95165Z" fill="#3F3D56">
+                            </path>
+                            <path d="M20.6723 13.5737C20.6723 13.5737 20.048 -0.708435 7.25 0.95165Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="80" height="15" viewBox="0 0 80 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M37.1738 14.5737C37.1738 14.5737 37.7981 0.291565 50.5961 1.95165Z" fill="#3F3D56">
+                            </path>
+                            <path d="M13.8853 14.5737C13.8853 14.5737 13.2609 0.291565 0.462891 1.95165Z" fill="#3F3D56">
+                            </path>
+                            <path d="M66.1035 13.6719C66.1035 13.6719 66.7278 -0.609744 79.5258 1.05028Z" fill="#3F3D56">
+                            </path>
+                            <path d="M68.1274 14.6582C68.1274 14.6582 67.5031 0.376584 54.7051 2.03661Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="51" height="14" viewBox="0 0 51 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M37.3652 13.5737C37.3652 13.5737 37.9895 -0.708435 50.7876 0.95165Z" fill="#3F3D56">
+                            </path>
+                            <path d="M14.0747 13.5737C14.0747 13.5737 13.4503 -0.708435 0.652344 0.95165Z" fill="#3F3D56">
+                            </path>
+                            <path d="M25.5649 13.5737C25.5649 13.5737 24.9406 -0.708435 12.1426 0.95165Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+                        <svg width="43" height="33" viewBox="0 0 43 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.9688 27.5767C10.9688 27.5767 11.593 13.2956 24.3911 14.9555Z" fill="#3F3D56"
+                                class="leaf__bye-bye"></path>
+                            <path
+                                d="M7.35456 13.9858C10.8921 13.9858 13.7599 10.855 13.7599 6.99292C13.7599 3.13084 10.8921 0 7.35456 0C3.81699 0 0.949219 3.13084 0.949219 6.99292C0.949219 10.855 3.81699 13.9858 7.35456 13.9858Z"
+                                fill="#498939"></path>
+                            <path d="M8.12061 18.7686H6.3125V32.5869H8.12061V18.7686Z" fill="#3F3D56"></path>
+                            <path d="M42.7173 32.5737C42.7173 32.5737 42.093 18.2916 29.2949 19.9516Z" fill="#3F3D56">
+                            </path>
+                        </svg>
+    
+                    </div>
+                </div>
+                <div class="footer__items">
+                    <div class="footer__item">
+                        <h3 class="footer__item-title">Leaf Tech</h3>
+                        <div class="footer__item-content">
+                            <p>
+                                Somos uma empresa de tecnologia do grupo Turma da Árvore que desenvolve soluções e
+                                promove a inovação tecnológica B2B de forma sustentável.
+                            </p>
+                            <p>
+                                Temos uma visão de criar tecnologia para as próximas gerações impactando menos o meio
+                                ambiente, utilizando-o para geração de riqueza sem agredi-lo.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="footer__item">
+                        <h4 class="footer__item-title">Entre em contato</h4>
+                        <div class="footer__item-content">
+                            <ul>
+                                <li class="footer__li">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                        class="svg-inline--fa fa-phone fa-w-16 fa-2x">
+                                        <path fill="currentColor"
+                                            d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"
+                                            class=""></path>
+                                    </svg>
+                                    <a href="tel:551934305050">+55 (19) 3430-5050</a>
+                                </li>
+    
+                                <li class="footer__li">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope-open"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                        class="svg-inline--fa fa-envelope-open fa-w-16 fa-2x">
+                                        <path fill="currentColor"
+                                            d="M494.586 164.516c-4.697-3.883-111.723-89.95-135.251-108.657C337.231 38.191 299.437 0 256 0c-43.205 0-80.636 37.717-103.335 55.859-24.463 19.45-131.07 105.195-135.15 108.549A48.004 48.004 0 0 0 0 201.485V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V201.509a48 48 0 0 0-17.414-36.993zM464 458a6 6 0 0 1-6 6H54a6 6 0 0 1-6-6V204.347c0-1.813.816-3.526 2.226-4.665 15.87-12.814 108.793-87.554 132.364-106.293C200.755 78.88 232.398 48 256 48c23.693 0 55.857 31.369 73.41 45.389 23.573 18.741 116.503 93.493 132.366 106.316a5.99 5.99 0 0 1 2.224 4.663V458zm-31.991-187.704c4.249 5.159 3.465 12.795-1.745 16.981-28.975 23.283-59.274 47.597-70.929 56.863C336.636 362.283 299.205 400 256 400c-43.452 0-81.287-38.237-103.335-55.86-11.279-8.967-41.744-33.413-70.927-56.865-5.21-4.187-5.993-11.822-1.745-16.981l15.258-18.528c4.178-5.073 11.657-5.843 16.779-1.726 28.618 23.001 58.566 47.035 70.56 56.571C200.143 320.631 232.307 352 256 352c23.602 0 55.246-30.88 73.41-45.389 11.994-9.535 41.944-33.57 70.563-56.568 5.122-4.116 12.601-3.346 16.778 1.727l15.258 18.526z"
+                                            class=""></path>
+                                    </svg>
+                                    <a
+                                        href="https://web.archive.org/web/20220307061903/mailto:contato@consultoriafr.com.br">contato@consultoriafr.com.br</a>
+                                </li>
+    
+                                <li class="footer__li">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-arrow"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                        class="svg-inline--fa fa-location-arrow fa-w-16 fa-2x">
+                                        <path fill="currentColor"
+                                            d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"
+                                            class=""></path>
+                                    </svg>
+                                    <span>Rua Tiradentes, 1200 - Edifício Splendor, andar 19 - Piracicaba/SP</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="footer__item">
+                        <h3 class="footer__item-title">Siga-nos</h3>
+                        <div class="footer__item-content footer__redes-sociais">
+                            <a href="https://web.archive.org/web/20220307061903/https://web.facebook.com/Leaf-Tech-100337282514636"
+                                rel="external" aria-label="Facebook" target="_blank">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    class="svg-inline--fa fa-facebook fa-w-16 fa-2x">
+                                    <path fill="currentColor"
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://web.archive.org/web/20220307061903/https://www.instagram.com/leaftech.tech/?hl=pt-br"
+                                rel="external" aria-label="Instagram" target="_blank">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    class="svg-inline--fa fa-instagram fa-w-14 fa-2x">
+                                    <path fill="currentColor"
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__menu">
+                    <nav>
+                        <ul>
+                            <li class="footer__li"><a href="#">Início</a></li>
+                            <li class="footer__li"><a href="#about">Sobre nós</a></li>
+                            <li class="footer__li"><a href="#quote">Nosso valor</a></li>
+                            <li class="footer__li"><a href="#solutions">Soluções</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__powered">
+                    <span>Copyright @ <span id="ano">2022</span></span>
+                    <span>Desenvolvido com 💚 e 🍃 por Leaf Tech</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
